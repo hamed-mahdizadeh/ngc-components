@@ -1,0 +1,167 @@
+
+hr {
+    margin: 0 5px 0 5px;
+  }
+  
+ :not(.ltr) .select-root>div::after {
+    content: "⯆";
+    float  : left;
+    
+  }
+
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(177, 82, 255); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  .ltr .select-root>div::before{
+    content: "⯆";
+    float  : right !important;
+  }
+  
+  .bootstrap-select {
+    width : 300px;
+    margin: 10px;
+  }
+  
+  .select-item-row {
+    margin        : 5px;
+    vertical-align: center;
+    text-align    : center;
+    padding       : 5px 5px 10px 5px;
+    cursor        : pointer;
+  
+  
+  }
+
+  .select-item-row.hover{
+    background-color: rgb(34, 148, 255);
+    color: #ffffff;
+  }
+  
+  .select-item-container>.select-item-row:not(:last-child) {
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: #ecebeb;
+  }
+  
+  .select-item-row:hover {
+    background-color: rgb(216, 231, 245);
+  }
+.multi.select-item-row::after{
+    content    : '☐';
+    float      : right;
+    margin-left: 10px;
+  }
+
+  .ltr .multi.select-item-row::after{
+    float      : left;
+  }
+
+
+  .select-item-row.selected::after {
+    content    : '🗹';
+    float      : right;
+    margin-left: 10px;
+  }
+
+  .ltr .select-item-row.selected::after{
+    float      : left;
+  }
+  
+  .select-item-container {
+    margin-top      : 2px 0 2px 0;
+    border          : 0.05em solid #ecebeb;
+    background-color: #ffffff;
+    max-height: 200px;
+    overflow-y:auto;
+  }
+  
+  .selected-box {
+    border: 1px solid #ffffff;
+    margin: 3px;
+  }
+  .selected-box::before{
+    content    : '🗹';
+  }
+
+  .bootstrap-select{
+    float: right;
+     text-align:center;
+  }
+
+  .input-container{
+     max-width: 280px;
+     float: right;
+  }
+
+  .ltr .input-container{
+    float: left;
+  }
+  
+  .bootstrap-select input[type="text"] {
+    margin-bottom: 5px;
+    border       : none !important;
+    outline   : none !important;
+    float:right;
+  }
+
+  .ltr .bootstrap-select input[type="text"] {
+    float:left;
+  }
+
+  :not(.ltr) .bootstrap-select input[type="text"] {
+    float:right;
+  }
+  /* .select-root{
+    /* max-width: 280px; 
+    float: right;
+  }*/
+  .ltr .select-root input{
+    float: left;
+  }
+
+  .ltr .select-root input{
+    direction: ltr;
+    text-align: left;
+  }
+ 
+  
+  .bootstrap-select input[type="text"]:focus {
+    border    : none !important;
+    box-shadow: none !important;
+    outline   : none;
+    float:right;
+  }
+  
+  .bootstrap-select input[type="text"]:active {
+    border    : none !important;
+    box-shadow: none !important;
+    outline   : none;
+  }
+  
+  .selected-box-container {
+    width: 100%;
+    float: right;
+    text-align: right;
+  }
+
+  .ltr .selected-box-container{
+    float: left;
+    text-align: left;
+  }

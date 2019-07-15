@@ -1,0 +1,23 @@
+<div #selectRoot tabindex="1" class="dropdown bootstrap-select" [class.ltr]="settings.aligne === 'ltr'"  (blur)="triggerBlind(true)">
+    <div class="select-root">
+        <div class="form-control" (click)="triggerBlind()">
+            <div class="input-container">
+                <input type="text" [ngModel]="key" (ngModelChange)="onSearch($event)" (blur)="triggerBlind(true)"
+                (keydown.arrowup)="scroleItems(true)" (keydown.arrowdown)="scroleItems(false)" (blur)="triggerBlind(true)" (keyup.enter)="selectItem()"
+                (keydown.escape)="triggerBlind(true)" />
+            </div>
+        </div>
+    </div>
+    <div class="selected-box-container" *ngIf="settings.type === 'multi'">
+        <button class="selected-box btn-sm btn-light" *ngFor="let item of selectedItems()" (click)="selectItem(item)">
+            {{item.text}}
+        </button>
+    </div>
+    <div class="select-item-container" [hidden]="close" style="position: absolute; z-index: 1000; width:100%;">
+        <div style="position: relative;" class="select-item-row" *ngFor="let item of filteredDataSource; let i = index" (click)="selectItem(item)"
+            [class.selected]="item.selected" [class.multi]="settings.type === 'multi'" [class.hover]="pointer === i">
+            {{item.text}}
+        </div>
+    </div>
+  </div>
+  

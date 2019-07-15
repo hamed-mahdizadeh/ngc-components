@@ -1,0 +1,61 @@
+<div class="container" #rtlPanel>
+    <div class="row">
+        <div class="col-md-6">
+            Multi Select (Direction rtl):
+        </div>
+        <div class="col-md-6">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <ngc-ngc-select [dataSource]="persianSelectDataSource" [settings]="{aligne:'rtl', type: 'multi'}">
+            </ngc-ngc-select>
+        </div>
+        <div class="col-md-6">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            Single Select (Direction rtl):
+        </div>
+        <div class="col-md-6">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <ngc-ngc-select [dataSource]="persianSelectDataSource" [settings]="{aligne:'rtl', type: 'mono'}">
+            </ngc-ngc-select>
+        </div>
+        <div class="col-md-6">
+        </div>
+    </div>
+</div>
+<div class="container" #ltrPanel>
+    <div class="row">
+        <div class="col-md-6">Multi Select (Direction ltr):</div>
+        <div class="col-md-6"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <ngc-ngc-select class="float-left" [dataSource]="englishSelectDataSource"
+                [settings]="{aligne:'ltr', type: 'multi'}">
+            </ngc-ngc-select>
+        </div>
+        <div class="col-md-6">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            Single Select (Direction ltr):</div>
+        <div class="col-md-6"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <ngc-ngc-select class="float-left" [dataSource]="englishSelectDataSource"
+                [settings]="{aligne:'ltr', type: 'multi'}">
+            </ngc-ngc-select>
+        </div>
+        <div class="col-md-6">
+        </div>
+    </div>
+</div>
